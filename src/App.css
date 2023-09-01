@@ -1,38 +1,61 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.apptitle {
+  margin: 1rem 0;
+  color: #6f6b6c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.todolist {
+  padding-left: 0;
+
+  .todoitem {
+    position: relative;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-top: 1px solid #ccc;
+
+    &.done {
+      .form-check-label {
+        color: #999;
+        text-decoration: line-through;
+      }
+    }
+
+    &.highlight {
+      border-color: #ff2968;
+      background-color: #ff8fb0;
+
+      &:last-child {
+        border-color: #ff2968;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .btn-danger {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+    .form-check-label {
+      width: 100%;
+
+      .form-check-input {
+        margin-right: 1rem;
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container-fluid {
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h4 {
+  margin-bottom: 20px;
 }
